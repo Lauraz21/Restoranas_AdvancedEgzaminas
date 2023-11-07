@@ -12,18 +12,18 @@ namespace Restoranas_AdvancedEgzaminas.UnitTest
             Table actualTable = new Table();
             Dish dish1 = new Dish()
             {
-                Price = 5.6,
+                Price = 5.6M,
             };
             actualTable.OrderDishes.Add(dish1);
 
             Dish dish2 = new Dish()
             {
-                Price = 7.2,
+                Price = 7.2M,
             };
             actualTable.OrderDishes.Add(dish2);
 
             //expected
-            double expectedTotal = 12.8;
+            decimal expectedTotal = 12.8M;
 
             //Assert
             Assert.AreEqual(expectedTotal, actualTable.GetOrderTotal());

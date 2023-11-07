@@ -25,7 +25,7 @@ namespace Restoranas_AdvancedEgzaminas
             Console.WriteLine($"TIME: {selectedTable.ReservationTime}\n");
             foreach (Dish dish in selectedTable.OrderDishes)
             {
-                Console.WriteLine($"{dish.Name} {dish.Price} €");
+                Console.WriteLine($"{dish.Name} \t\t- {dish.Price} €");
             }
 
             Console.WriteLine($"\nTOTAL: {selectedTable.GetOrderTotal()} €");

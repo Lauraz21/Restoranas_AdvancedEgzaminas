@@ -27,7 +27,7 @@ namespace Restoranas_AdvancedEgzaminas
         {
             IsReserved = false;
         }
-        public double GetOrderTotal()
+        public decimal GetOrderTotal()
         {
             return OrderDishes.Sum(dish => dish.Price);
         }
