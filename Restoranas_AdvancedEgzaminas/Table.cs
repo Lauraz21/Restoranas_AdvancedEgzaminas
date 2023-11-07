@@ -13,6 +13,10 @@ namespace Restoranas_AdvancedEgzaminas
         public DateTime ReservationTime { get; set; }
         public bool IsReserved { get; set; }
 
+        public Table()
+        {
+            OrderDishes = new List<Dish>();
+        }
         public void ReserveTable()
         {
             ReservationTime = DateTime.Now;
