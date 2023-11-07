@@ -22,13 +22,13 @@ namespace Restoranas_AdvancedEgzaminas
                 return;
             }
 
-            Console.WriteLine($"TIME: {selectedTable.ReservationTime}");
+            Console.WriteLine($"TIME: {selectedTable.ReservationTime}\n");
             foreach (Dish dish in selectedTable.OrderDishes)
             {
                 Console.WriteLine($"{dish.Name} {dish.Price} €");
             }
 
-            Console.WriteLine($"TOTAL: {selectedTable.GetOrderTotal()} €");
+            Console.WriteLine($"\nTOTAL: {selectedTable.GetOrderTotal()} €");
 
             Console.ReadKey();
         }

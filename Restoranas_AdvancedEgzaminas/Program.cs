@@ -21,7 +21,7 @@ namespace Restoranas_AdvancedEgzaminas
             List<DishGroup> dishGroups = filePersistence.ReadDishGroupsFromFile();
 
             ConsoleMenu menu = new ConsoleMenu(new SimpleReceiptWriter());
-           
+
             menu.ShowMenu(tables, dishGroups);
         }
     }

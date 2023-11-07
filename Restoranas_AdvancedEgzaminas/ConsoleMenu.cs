@@ -20,8 +20,9 @@ namespace Restoranas_AdvancedEgzaminas
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine(" ORDERING SYSTEM");
-                Console.WriteLine(" \n (1) MAKE ORDER \n (2) RECEIPT \n (3) FREE TABLE \n (q) QUIT");
+               
+                Console.WriteLine(" ORDERING SYSTEM ");
+                Console.WriteLine(" \n(1) ORDER \n(2) RECEIPT \n(3) FREE TABLE \n(q) QUIT");
 
                 char choice = Console.ReadKey().KeyChar;
 
@@ -53,7 +54,7 @@ namespace Restoranas_AdvancedEgzaminas
 
             if (selectedTable.IsReserved)
             {
-                Console.WriteLine("Warning. Table is already reserved, editing order.");
+                Console.WriteLine("WARNING! THE TABLE IS ALREADY RESERVED, EDITING ORDER: ");
             }
             else
             {
@@ -67,14 +68,14 @@ namespace Restoranas_AdvancedEgzaminas
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("SELECT A GROUP: ");
+                Console.WriteLine("SELECT A GROUP: \n");
 
                 foreach (var dishGroup in dishGroups)
                 {
-                    Console.WriteLine($"({dishGroup.ID}){dishGroup.Name}");
+                    Console.WriteLine($"({dishGroup.ID}) {dishGroup.Name}");
                 }
 
-                Console.WriteLine("q - BACK");
+                Console.WriteLine("(q) BACK");
 
                 string userInput = Console.ReadLine();
 
@@ -95,14 +96,14 @@ namespace Restoranas_AdvancedEgzaminas
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("SELECT DISH");
+                Console.WriteLine("SELECT DISH: \n");
 
                 foreach (Dish dish in dishes)
                 {
-                    Console.WriteLine($"({dish.ID}){dish.Name}");
+                    Console.WriteLine($"({dish.ID}) {dish.Name}");
                 }
 
-                Console.WriteLine("(q) - BACK");
+                Console.WriteLine("(q) BACK");
 
                 string userInput = Console.ReadLine();
 
@@ -120,7 +121,6 @@ namespace Restoranas_AdvancedEgzaminas
         }
         private void FreeTable(List<Table> tables)
         {
-
             Console.Clear();
             Console.WriteLine("SELECT TABLE: ");
             int selectedTableID = int.Parse(Console.ReadLine());
@@ -131,6 +131,5 @@ namespace Restoranas_AdvancedEgzaminas
             Console.WriteLine("TABLE FREED");
             Console.ReadKey();
         }
-
     }
 }

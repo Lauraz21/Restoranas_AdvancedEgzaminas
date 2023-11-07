@@ -8,7 +8,6 @@ namespace Restoranas_AdvancedEgzaminas.UnitTest
         [TestMethod]
         public void TestOrderTotal()
         {
-
             //actual
             Table actualTable = new Table();
             Dish dish1 = new Dish()
@@ -28,7 +27,6 @@ namespace Restoranas_AdvancedEgzaminas.UnitTest
 
             //Assert
             Assert.AreEqual(expectedTotal, actualTable.GetOrderTotal());
-
         }
     }
 }
